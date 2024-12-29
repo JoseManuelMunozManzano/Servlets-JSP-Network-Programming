@@ -1,0 +1,15 @@
+Annotations:
+===========
+https://docs.oracle.com/javaee/6/api/javax/servlet/annotation/package-summary.html
+
+web.xml Elements
+================
+https://docs.oracle.com/middleware/12213/wls/WBAPP/web_xml.htm#WBAPP502
+
+Servlet API
+===========
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/
+
+HTTP Error Codes
+================
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes

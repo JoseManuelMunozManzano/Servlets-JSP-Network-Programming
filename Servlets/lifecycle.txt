@@ -1,0 +1,25 @@
+LIFE CYCLE OF A SERVLET
+=======================
+
+Loading         --> Pasa a memoria (container), en mi ejemplo, el archivo App.class de Tomcat.
+Instance        --> Se instancia el servlet, en mi ejemplo crea una instancia de la clase App. SE INSTANCIA SOLO UNA VEZ!!!
+call init()     --> Se llama al método init() de la interface Servlet (se parte de la clase HttpServlet en mi ejemplo)
+                    Este método init() carga un SERVLET CONTEXT details y no hace nada más, pero se puede sobreescribir para que haga lo que queramos, como inicializar algún objeto (inmutable porque más adelante veremos que va a haber varios threads) que necesitemos...
+                    Tan pronto como el método init() finaliza su ejecución, el servlet queda listo para servir los requests.
+
+
+
+req,resp object   --> El objeto req nos permite extraer la información HTTP enviada por el cliente.
+                      El objeto resp nos permite escribir información HTTP que será devuelta al cliente.
+call service()    --> Los objetos req y resp se pasan a este método, que es abstracto. Lo implementa la clase HttpServlet.
+                      Su implementación llama a doPost() si el req es un Post, doPut() si es un método Put... y estos métodos pueden ser sobreescritos en nuestra clase.
+                      En mi proyecto ejemplo helloworld, la clase sobreescrita fue doGet()
+                      Para cada uno de los requests, no se crea una instancia nueva (no se llama a call init() cada vez), sino que se llama al método service(), ya que hay varios threads (Thread Pool) manejando cada tarea (las peticiones).
+distryo req, resp
+
+
+
+destroy()           --> Una vez terminadas las requests y esperado un cierto tiempo, se eliminan los threads.
+                        El container los va eliminando por medio de llamadas a este método destroy() cuya implementación está vacía, pero podemos sobreescribirlo para hacer lo que necesitemos, como cerrar conexiones de BBDD, un fichero...
+garbage collection (deinstantiation)    --> Destruyen el objeto servlet
+unloading                               --> Descargamos el bytecode (App.class) de memoria

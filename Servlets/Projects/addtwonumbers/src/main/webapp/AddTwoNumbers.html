@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Add two numbers</title>
+  </head>
+
+  <body>
+    <h1>Add Two Numbers!!</h1>
+
+    <br />
+    <br />
+
+		<!-- Este nombre AddTwoNumbers tiene que ser exactamente el mismo que el nombre de la clase (el servlet), o, si se usa el fichero web.xml, tiene que ser el URL Pattern especificado.  -->
+    <form action="AddTwoNumbers" method="GET">
+      Enter Value 1:
+			<!-- number1 aparece también en AddTwoNumbers.java en getParameter("number1") -->
+      <input type="text" name="number1" value="0" />
+      <br />
+      <br />
+      Enter Value 2:
+			<!-- number2 aparece también en AddTwoNumbers.java en getParameter("number2") -->
+      <input type="text" name="number2" value="0" />
+      <br />
+      <br />
+      <input type="submit" value="Add" />
+    </form>
+  </body>
+</html>
