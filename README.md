@@ -6,4 +6,4 @@ El orden de las carpetas es el siguiente:
 
 - Networking
 - Servlets
-- JavaServer-Pages
+- Java-Server-Pages

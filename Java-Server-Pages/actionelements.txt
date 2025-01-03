@@ -1,0 +1,17 @@
+jsp:include
+        Nos ayuda a renderizar el contenido de un archivo JSP en otro archivo JSP.
+jsp:forward
+        Nos ayuda a redirigir la petición a otra página. Es una redirección.
+jsp:param
+
+
+jsp:useBean
+jsp:setProperty
+jsp:getProperty
+
+
+Estos dos action elements ya no se usan:
+jsp:plugin
+        Servía para incluir plugin externos, como applets, que ya no se usan.
+jsp:fallback
+        Es un acción que se ejecuta si el plugin no se puede ejecutar.

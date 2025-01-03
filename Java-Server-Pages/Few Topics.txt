@@ -1,0 +1,51 @@
+JSTL Functions
+==============
+
+- Refer to the provided JSTL Document
+
+how to call servlet from JSP
+============================
+<jsp:include page="/pathToServlet/MyServlet" flush="true" />
+<jsp:forward page="/pathToServlet/MyServlet" />
+
+request.getRequestDispatcher("/WEB-INF/result.jsp").forward(request, response);
+
+Error handling in jsp
+=====================
+-> Use try catch blocks
+<%@ page errorPage="ExceptionHandler.jsp" %>
+
+
+JSP Strict practices
+====================
+
+- Try (or avoid) not to include java in JSP.
+- Try to use custom tags/JSTL and templates
+- Put comments where ever appropriate
+
+Project structure
+=================
+-WebApps
+    |-ProjectRoot
+    |    |
+    |    |-[META-INF]
+    |    |    |- [MANIFEST.MF]
+    |    |-[WEB-INF]
+    |    |    |-[classes]
+    |	 |    |    |-<.class files>
+    |	 |    |-[lib]
+    |	 |    |    |-<.jar files>
+    |	 |    |-[tags]
+    |	 |    |    |-<.tag files>
+    |	 |    |-<.tld files>
+    |    |-<Files like .html, .jpeg, .jsp, etc>
+    |    |
+    |    |
+    |-ProjectRoot
+    |
+    |
+
+
+
+
+   

@@ -1,0 +1,25 @@
+import - Used to import class, interface, package
+
+extends - Just like extends keyword of a class, we can tell the classname that the servlet will extend
+
+info -  information of the JSP page using getServletInfo()
+
+buffer - output buffer size. Default is 8kb but you can change it
+
+language - scripting language used. Default is Java
+
+isELIgnored - If true, EL (expression language) is ignored by the server
+
+contentType - Defines the MIME (Multipurpose Internet Mail Extension) type of the HTTP response. The default value is "text/html;charset=ISO-8859-1".
+
+isThreadSafe - If false, web container will serialize the request and process one at a time and the web is going to be very slow
+
+autoFlush -  indicates the container to flush the data or not when the buffer gets filled to be sent to client
+
+session - If false, container does not take initiative to maintain sessions
+
+pageEncoding - lets us specify the char encoding being used
+
+errorPage - if an exception occurs in current page, container will take you to the given error page
+
+isErrorPage - used to tell the container that the current page is an error page
